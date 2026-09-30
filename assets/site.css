@@ -72,7 +72,9 @@ section{padding:64px 0}
 @media (max-width:900px){.cards{grid-template-columns:1fr}}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .split img{border-radius:var(--radius-lg) 0 var(--radius-lg) var(--radius-lg);aspect-ratio:4/5;object-fit:cover;width:100%}
+.split>*{min-width:0}
 .split .card{padding:44px}
+.card a[href^="mailto:"]{overflow-wrap:anywhere}
 @media (max-width:900px){.split{grid-template-columns:1fr}}
 .dark{background:var(--forest);color:#f4f7e6;border-radius:var(--radius-lg)}
 .dark h2,.dark h3{color:#fff}.dark .kicker{color:var(--sun)}
