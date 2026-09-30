@@ -56,7 +56,10 @@
 
   // ---------- Mobile nav ----------
   const btn = document.querySelector('.menu-btn'), nav = document.querySelector('.nav');
-  if (btn && nav) btn.addEventListener('click', () => { nav.classList.toggle('open'); btn.setAttribute('aria-expanded', nav.classList.contains('open')); });
+  if (btn && nav) {
+    btn.addEventListener('click', () => { nav.classList.toggle('open'); btn.setAttribute('aria-expanded', nav.classList.contains('open')); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); btn.focus(); } });
+  }
 
   // ---------- YouTube ----------
   const vid = document.getElementById('yt-embed');
