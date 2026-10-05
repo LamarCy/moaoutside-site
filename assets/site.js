@@ -5,6 +5,12 @@
     // YouTube channel ID starts with "UC…". Find it at youtube.com → your channel → Settings → Advanced.
     youtubeChannelId: 'REPLACE_WITH_CHANNEL_ID',
     youtubeChannelUrl: 'https://www.youtube.com/@moaoutside',
+    // Stripe Payment Links (Stripe Dashboard → Payment Links → + New). Paste the full
+    // https://donate.stripe.com/… or https://buy.stripe.com/… URL. Leave '' to hide a button.
+    donate: {
+      oneTime: '',   // "Customers choose what to pay" link for one-time gifts
+      monthly: ''    // optional recurring (monthly) link
+    },
     social: {
       instagram: 'https://www.instagram.com/',
       facebook: 'https://www.facebook.com/',
@@ -74,4 +80,17 @@
     document.querySelectorAll('[data-yt-link]').forEach(a => a.href = CONFIG.youtubeChannelUrl);
   }
   document.querySelectorAll('[data-social]').forEach(a => { const k = a.dataset.social; if (CONFIG.social[k]) a.href = CONFIG.social[k]; });
+
+  // ---------- Donate (Stripe Payment Links) ----------
+  const isStripe = u => /^https:\/\/(donate|buy)\.stripe\.com\//.test(u || '');
+  const donate = CONFIG.donate || {};
+  let live = 0;
+  document.querySelectorAll('[data-donate]').forEach(a => {
+    const url = donate[a.dataset.donate];
+    if (isStripe(url)) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; live++; }
+    else a.hidden = true;
+  });
+  const pending = document.querySelector('[data-donate-pending]');
+  if (pending) pending.hidden = live > 0;
+  // Site-wide Donate buttons go to /donate; if only a one-time link exists and no /donate page is wanted, they still work.
 })();

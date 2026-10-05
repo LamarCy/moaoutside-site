@@ -6,6 +6,7 @@ Static site for MOA, Inc. (formerly hosted on Wix at minorityoutdooralliance.org
 index.html                 Home
 about-us/index.html        About Us
 contact/index.html         Contact (Netlify Forms)
+donate/index.html         Donate (Stripe Payment Links, configured in assets/site.js)
 privacy-policy/            Privacy Policy
 accessibility-statement/   Accessibility Statement
 assets/site.css            Styles (palette + type from the Wix site and the 2026 print materials)
@@ -23,7 +24,8 @@ python3 -m http.server 8000   # then open http://localhost:8000
 ## Things to fill in (search for them)
 - `assets/site.js` → `youtubeChannelId` (starts with `UC…`) and `youtubeChannelUrl`; the social links object.
 - `index.html` → Partners: swap the text tiles for `<img>` logos in `assets/logos/`.
-- `contact/index.html` → Donate card: confirm the Zelle address / add a donation link.
+- `assets/site.js` → `donate.oneTime` (and optionally `donate.monthly`): paste the Stripe Payment Link URLs. Until set, /donate hides the Stripe buttons and shows Zelle.
+- `contact/index.html` and `donate/index.html` → confirm the Zelle address.
 - Emails: the site uses `info@moaoutside.org`. Set that mailbox up (or change it) before launch.
 
 ## Deploy
