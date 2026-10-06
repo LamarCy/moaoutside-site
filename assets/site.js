@@ -3,8 +3,8 @@
   // ---------- Site config (edit these) ----------
   const CONFIG = {
     // YouTube channel ID starts with "UC…". Find it at youtube.com → your channel → Settings → Advanced.
-    youtubeChannelId: 'REPLACE_WITH_CHANNEL_ID',
-    youtubeChannelUrl: 'https://www.youtube.com/@moaoutside',
+    youtubeChannelId: 'UCdOdvRQhgNv8f_I1PDOaKHw',
+    youtubeChannelUrl: 'https://www.youtube.com/@moa.outside',
     // Stripe Payment Links (Stripe Dashboard → Payment Links → + New). Paste the full
     // https://donate.stripe.com/… or https://buy.stripe.com/… URL. Leave '' to hide a button.
     donate: {
@@ -14,7 +14,7 @@
     social: {
       instagram: 'https://www.instagram.com/',
       facebook: 'https://www.facebook.com/',
-      youtube: 'https://www.youtube.com/',
+      youtube: 'https://www.youtube.com/@moa.outside',
       tiktok: 'https://www.tiktok.com/',
       linkedin: 'https://www.linkedin.com/',
       x: 'https://x.com/'
