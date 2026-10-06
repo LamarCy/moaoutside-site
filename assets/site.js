@@ -8,7 +8,7 @@
     // Stripe Payment Links (Stripe Dashboard → Payment Links → + New). Paste the full
     // https://donate.stripe.com/… or https://buy.stripe.com/… URL. Leave '' to hide a button.
     donate: {
-      oneTime: '',   // "Customers choose what to pay" link for one-time gifts
+      oneTime: 'https://buy.stripe.com/8x2aEXcDWd3o3A10yc0Ba00',   // "Customers choose what to pay" link for one-time gifts
       monthly: ''    // optional recurring (monthly) link
     },
     social: {
