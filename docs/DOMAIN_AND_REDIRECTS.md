@@ -45,7 +45,7 @@ The cleanest way is to let Netlify own the old domain too, so every old link 301
 Keep the old domain registered for at least a year or two — search engines, printed materials, and email signatures still point there.
 
 ## 5. Email
-- Create `info@moaoutside.org` (Google Workspace, Zoho, etc.) and add its MX records at the new domain's DNS.
+- Contact email stays `ashleysmith@minorityoutdooralliance.org` (existing mailbox on the old domain); no new mailbox needed for moaoutside.org.
 - Keep the old `@minorityoutdooralliance.org` mailboxes alive and forward them to the new addresses.
 
 ## 6. After launch
